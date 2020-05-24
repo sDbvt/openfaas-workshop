@@ -13,10 +13,17 @@ Hoặc sử dụng: https://labs.play-with-docker.com/
 
 ## Cài đặt OpenFaaS CLI
 
+Cài OpenFaaS CLI
+```
 curl -sLSf https://cli.openfaas.com | sudo sh
+```
 
+Kiểm tra OpenFaaS CLI
+```
 faas-cli help
+
 faas-cli version
+```
 
 ## Đăng nhập Docker Hub
 
@@ -29,7 +36,7 @@ Các images sau khi build ra sẽ được tự động đưa lên Docker Hub. V
 docker login
 ```
 
-![alt text](../openfaas-workshop/img/docker-login.png "Docker Login")
+![alt text](/img/docker-login.png "Docker Login")
 
 Đặt prefix cho Docker Hub, việc này sẽ làm tối ưu thời gian trong việc sửa tên
 
@@ -68,14 +75,14 @@ Dùng lệnh
 curl -s https://raw.githubusercontent.com/rancher/k3d/master/install.sh | bash
 ```
 
-![alt text](../openfaas-workshop/img/k3d.png "K3d")
+![alt text](/img/k3d.png "K3d")
 
 Chạy k3d
 ```
 k3d create
 ```
 
-![alt text](../openfaas-workshop/img/k3d-create.png "K3d create")
+![alt text](/img/k3d-create.png "K3d create")
 
 *Tham khảo: https://github.com/rancher/k3d*
 
@@ -190,6 +197,15 @@ Kiểm tra OpenFaaS có hoạt động hay chưa:
 ```
 faas-cli list
 ```
+
+- Để xóa k3d
+
+Dùng lệnh
+```
+k3d delete
+```
+
+> Xóa k3d để trở lại ban đầu, muốn chạy OpenFaaS tiếp thì quay lại lệnh k3d create
 
 - Sửa OpenFaaS URL
 
